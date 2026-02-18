@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import Image from "next/image";
 import {
     Facebook,
@@ -16,7 +15,7 @@ const Footer = () => {
     return (
         <footer className="relative bg-slate-900 text-gray-300 overflow-hidden">
             {/* Top Accent Line */}
-            <div className="h-1 w-full bg-gradient-to-r from-blue-500 to-blue-700" />
+            <div className="h-1 w-full bg-linear-to-r from-blue-500 to-blue-700" />
 
             <div className="max-w-7xl mx-auto px-6 py-16">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
@@ -117,16 +116,16 @@ const Footer = () => {
                                     className="text-blue-500 mt-1"
                                 />
                                 <span>
-                                    123 Energy Street, Tech City, Country
+                                    Ruiru, Kiambu County, Kenya
                                 </span>
                             </li>
                             <li className="flex items-center gap-3">
                                 <Phone size={18} className="text-blue-500" />
-                                <span>+123 456 7890</span>
+                                <span>+25474274694</span>
                             </li>
                             <li className="flex items-center gap-3">
                                 <Mail size={18} className="text-blue-500" />
-                                <span>info@yourcompany.com</span>
+                                <span>mainajames@gmail.com</span>
                             </li>
                         </ul>
                     </div>
