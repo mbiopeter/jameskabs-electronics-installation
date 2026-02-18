@@ -6,15 +6,38 @@ import Image from 'next/image';
 import { 
     Mail, 
     Phone, 
-    Facebook, 
+    Facebook,
     Twitter, 
     Linkedin, 
-    Youtube, 
+    Instagram,
     ChevronDown, 
     ArrowRight, 
     Menu, 
     X,
 } from 'lucide-react';
+
+const socialLinks = [
+    {
+        icon: Facebook,
+        href: "https://facebook.com/yourusername",
+        label: "Facebook",
+    },
+    {
+        icon: Twitter,
+        href: "https://twitter.com/yourusername",
+        label: "Twitter",
+    },
+    {
+        icon: Linkedin,
+        href: "https://linkedin.com/in/yourusername",
+        label: "LinkedIn",
+    },
+    {
+        icon: Instagram,
+        href: "https://instagram.com/yourusername",
+        label: "Instagram",
+    },
+];
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -64,8 +87,14 @@ const Header = () => {
                     <div className="bg-blue-600 flex items-center px-6 md:px-10 py-2 md:py-0 md:rounded-b-lg">
                         <span className="font-bold mr-4 hidden sm:inline">Follow Me:</span>
                         <div className="flex space-x-3">
-                            {[Facebook, Twitter, Linkedin, Youtube].map((Icon, idx) => (
-                                <a key={idx} href="#" className="w-8 h-8 flex items-center justify-center rounded-full bg-white text-blue-600 hover:bg-[#ad1559] hover:text-white transition-all shadow-md">
+                            {socialLinks.map(({ icon: Icon, href, label }) => (
+                                <a
+                                    key={label}
+                                    href={href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label={label}
+                                    className="w-8 h-8 flex items-center justify-center rounded-full bg-white text-blue-600 hover:bg-[#ad1559] hover:text-white transition-all shadow-md">
                                     <Icon size={16} />
                                 </a>
                             ))}

@@ -78,14 +78,7 @@ const Services = () => {
     return (
         <div id="services" className="bg-gray-50 relative overflow-x-hidden w-full">
             <section className="py-24 px-6 md:px-12 overflow-hidden">
-                <div className="
-                    absolute right-0 top-0
-                    w-full h-full
-                    z-1
-                    opacity-15
-                    pointer-events-none
-                    bg-[radial-gradient(#0028dc_1px,transparent_1px)]
-                    bg-size-[16px_16px]"></div>
+                <div className="absolute right-0 top-0 w-full h-full z-1 opacity-15 pointer-events-none bg-[radial-gradient(#0028dc 1px,transparent 1px)] bg-size-[16px_16px]"></div>
                 <div className="max-w-7xl mx-auto">
 
                     {/* Header */}
@@ -131,18 +124,8 @@ const Services = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="
-                                    group min-w-74 z-2 max-w-74
-                                    bg-white border border-gray-200
-                                    p-8 rounded-xl shadow-sm
-                                    hover:shadow-xl transition
-                                ">
-                                <div className="
-                                    w-16 h-16 mb-6 rounded-xl
-                                    bg-blue-100 text-blue-600
-                                    flex items-center justify-center
-                                    group-hover:bg-blue-600
-                                    group-hover:text-white transition">
+                                className="group min-w-74 z-2 max-w-74 bg-white border border-gray-200 p-8 rounded-xl shadow-sm hover:shadow-xl transition">
+                                <div className="w-16 h-16 mb-6 rounded-xl flex items-center justify-center bg-blue-100 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition duration-300">
                                     {service.icon}
                                 </div>
 
@@ -159,13 +142,7 @@ const Services = () => {
                                         href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(service.whatsappMessage)}`}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="
-                                            inline-flex items-center gap-2
-                                            text-blue-600 font-bold text-sm
-                                            translate-y-6 opacity-0
-                                            group-hover:translate-y-0
-                                            group-hover:opacity-100
-                                            transition-all duration-300">
+                                        className="inline-flex items-center gap-2 text-blue-600 font-bold text-sm translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                                         Learn More
                                         <ChevronRight size={16} />
                                     </a>
@@ -174,16 +151,6 @@ const Services = () => {
                         ))}
                     </div>
                 </div>
-
-                <style jsx>{`
-                    .scrollbar-hide::-webkit-scrollbar {
-                        display: none;
-                    }
-                    .scrollbar-hide {
-                        -ms-overflow-style: none;
-                        scrollbar-width: none;
-                    }
-                `}</style>
             </section>
         </div>
     );

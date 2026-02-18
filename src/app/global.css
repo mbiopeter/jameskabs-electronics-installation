@@ -13,11 +13,20 @@
         --foreground: #ededed;
     }
 }
+
 html {
     scroll-behavior: smooth;
 }
 [id] {
     scroll-margin-top: 95px;
+}
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 .white-mode {
     --background: #ffffff;

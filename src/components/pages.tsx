@@ -37,8 +37,7 @@ const Pages = () => {
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                >
+                    transition={{ duration: 0.8, ease: "easeOut" }}>
                     <h5 className="uppercase font-semibold tracking-widest text-sm text-blue-400 mb-2">
                         About Our Services
                     </h5>
