@@ -19,7 +19,6 @@ const Home = () => {
             <Pages />
             <Gallery />
             <Faqs />
-
             <FloatingContact />
         </div>
     )
