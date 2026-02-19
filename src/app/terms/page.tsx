@@ -89,7 +89,7 @@ const Page = () => {
                                 ))}
                             </ul>
                             <div className="mt-8 pt-6 border-t text-xs text-gray-500">
-                                Last updated: {new Date().getFullYear()}
+                                Last updated: 2026
                             </div>
                         </div>
                     </aside>
