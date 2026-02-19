@@ -57,7 +57,7 @@ const About = () => {
                         <motion.div
                             animate={{ y: [0, -12, 0] }}
                             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                            className="absolute left-0 bottom-50 md:bottom-12 -translate-y-1/2 z-30 bg-white p-6 shadow-xl flex items-center gap-4">
+                            className="absolute left-0 bottom-60 md:bottom-12 -translate-y-1/2 z-30 bg-white p-6 shadow-xl flex items-center gap-4">
                             <div className="bg-blue-100 p-3 rounded-full">
                                 <Zap className="w-8 h-8 text-blue-600" />
                             </div>
