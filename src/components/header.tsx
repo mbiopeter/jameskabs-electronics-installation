@@ -158,8 +158,15 @@ const Header = () => {
                                     {['Home', 'Services', 'Pages', 'Blog'].includes(item) && <ChevronDown size={18} />}
                             </Link>
                         ))}
-                        <button className="w-full bg-blue-600 text-white py-4 font-bold rounded mt-4 flex justify-center items-center gap-2">
-                            Get A Quote <ArrowRight size={20} />
+                        <button className="w-full bg-blue-600 text-white py-4 font-bold rounded mt-4 ">
+                            <a
+                                href={whatsappQuoteLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className='flex justify-center items-center gap-2'>
+                                Get A Quote
+                                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                            </a>
                         </button>
                     </div>
                 </div>
