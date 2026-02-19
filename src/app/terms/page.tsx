@@ -14,7 +14,7 @@ const sections = [
 ];
 
 const Page = () => {
-    const [activeSection, setActiveSection] = useState("acceptance");
+    const [activeSection, setActiveSection] = useState<string>("acceptance");
 
     useEffect(() => {
         const observer = new IntersectionObserver(
