@@ -137,7 +137,7 @@ const BannerAnimation = () => {
             </div>
 
             {/* Controls */}
-            <div className="absolute top-1/2 left-0 right-0 flex justify-between items-center px-4 z-20 -translate-y-1/2">
+            <div className="absolute md:top-1/2 bottom-2 left-0 right-0 flex justify-between items-center px-4 z-20 -translate-y-1/2">
                 <button 
                     onClick={prevSlide}
                     className="p-4 border border-white/20 text-white hover:bg-blue-600 transition-all rounded-full shadow-lg">
