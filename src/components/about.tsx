@@ -197,9 +197,9 @@ const About = () => {
 
                                 <iframe
                                     className="w-full h-full"
-                                    src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
-                                    title="Company Video"
-                                    allow="autoplay; encrypted-media"
+                                    src="https://www.youtube.com/embed/s3vpH3A_eTA?si=JaPX7DFfmSY7uVbt&amp;controls=1&amp;start=6"
+                                    title="JamesKabs Video"
+                                    allow="autoplay; encrypted-media; fullscreen"
                                     allowFullScreen
                                 ></iframe>
                             </motion.div>
