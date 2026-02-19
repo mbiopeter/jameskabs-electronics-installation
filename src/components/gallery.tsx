@@ -1,12 +1,12 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 const Gallery = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const scrollRef = useRef<HTMLDivElement | null>(null);
+    const [itemsToShow, setItemsToShow] = useState(4);
 
     const galleryPosts = [
         { id: 1, img: "/gallery1.jpg", tag: "Electrical Installation", title: "Commercial Electrical Wiring Project" },
@@ -19,9 +19,6 @@ const Gallery = () => {
         { id: 8, img: "/gallery8.jpg", tag: "Energy Efficiency", title: "Smart Home Energy Management" },
     ];
 
-    const [itemsToShow, setItemsToShow] = useState(4);
-
-    // Responsive items per view
     useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth < 640) setItemsToShow(1);
@@ -35,7 +32,6 @@ const Gallery = () => {
 
     const maxIndex = Math.max(galleryPosts.length - itemsToShow, 0);
 
-    // Auto-scroll (perfect for mobile too)
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
@@ -43,73 +39,50 @@ const Gallery = () => {
         return () => clearInterval(interval);
     }, [maxIndex]);
 
-    /* -------------------------------
-       Pagination (MAX 4 DOTS)
-    -------------------------------- */
     const totalDots = 4;
-    const stepSize = Math.ceil((maxIndex + 1) / totalDots);
-
-    const dots = Array.from({ length: Math.min(totalDots, maxIndex + 1) });
-
-    const activeDot = Math.min(
-        Math.floor(currentIndex / stepSize),
-        dots.length - 1
-    );
+    const stepSize = Math.ceil(galleryPosts.length / totalDots);
+    const dots = Array.from({ length: totalDots });
+    const activeDot = Math.min(Math.floor(currentIndex / stepSize), dots.length - 1);
 
     return (
         <section className="py-20 bg-white w-full overflow-hidden">
             <div className="mx-auto px-4">
-                <div className="relative overflow-hidden" ref={scrollRef}>
-                    <motion.div
-                        className="flex gap-6"
-                        animate={{
-                            x: `-${currentIndex * (100 / itemsToShow)}%`,
-                        }}
-                        transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
-                    >
-                        {galleryPosts.map((post) => (
-                            <div
+                <div className="relative w-full h-120 flex items-center justify-center overflow-hidden">
+                    <AnimatePresence initial={false}>
+                        {galleryPosts.slice(currentIndex, currentIndex + itemsToShow).map((post, i) => (
+                            <motion.div
                                 key={post.id}
-                                className="lg:min-w-[calc(25%-18px)] sm:min-w-[calc(50%-12px)] min-w-full relative group cursor-pointer"
-                            >
-                                <div className="relative h-96 w-full overflow-hidden">
+                                initial={{ x: "100%", opacity: 0 }}
+                                animate={{ x: 0, opacity: 1 }}
+                                exit={{ x: "-100%", opacity: 0 }}
+                                transition={{ type: "tween", duration: 0.6, ease: "easeInOut" }}
+                                className={`absolute top-0 left-0 w-full sm:w-[calc(50%-6px)] lg:w-[calc(25%-12px)] px-0`}
+                                style={{ left: `${i * 100 / itemsToShow}%` }}>
+                                <div className="relative h-110 w-full overflow-hidden shadow-sm border border-gray-200 group cursor-pointer">
                                     <Image
                                         src={post.img}
                                         alt={post.title}
                                         fill
                                         className="object-cover transition-transform duration-500 group-hover:scale-110"
                                     />
+                                    <div className="absolute bottom-6 left-4 right-4 bg-white p-6 shadow-lg border-l-4 border-blue-600">
+                                        <p className="text-blue-600 text-sm font-semibold mb-2">{post.tag}</p>
+                                        <h3 className="text-xl font-bold text-slate-900">{post.title}</h3>
+                                    </div>
                                 </div>
-
-                                <div className="absolute bottom-6 left-4 right-4 bg-white p-6 shadow-lg border-l-4 border-blue-600">
-                                    <p className="text-blue-600 text-sm font-semibold mb-2">
-                                        {post.tag}
-                                    </p>
-                                    <h3 className="text-xl font-bold text-slate-900">
-                                        {post.title}
-                                    </h3>
-                                </div>
-                            </div>
+                            </motion.div>
                         ))}
-                    </motion.div>
+                    </AnimatePresence>
                 </div>
 
-                {/* Pagination Dots (MAX 4) */}
+                {/* Pagination Dots */}
                 <div className="flex justify-center mt-12">
                     <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full border-2 border-blue-200 border-dotted">
                         {dots.map((_, i) => (
                             <button
                                 key={i}
-                                onClick={() =>
-                                    setCurrentIndex(
-                                        Math.min(i * stepSize, maxIndex)
-                                    )
-                                }
-                                className={`h-2.5 w-2.5 rounded-full transition-all duration-300 ${
-                                    activeDot === i
-                                        ? "bg-blue-600"
-                                        : "bg-blue-200 hover:bg-blue-400"
-                                }`}
+                                onClick={() => setCurrentIndex(Math.min(i * stepSize, maxIndex))}
+                                className={`h-2.5 w-2.5 rounded-full transition-all duration-300 ${activeDot === i ? "bg-blue-600" : "bg-blue-200 hover:bg-blue-400"}`}
                             />
                         ))}
                     </div>
