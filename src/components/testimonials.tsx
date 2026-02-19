@@ -56,7 +56,7 @@ const Testimonials = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="max-w-7xl mx-auto bg-white shadow-2xl px-6 py-14 relative overflow-hidden">
-                <div className="absolute right-0 top-0 w-72 h-72 opacity-20 pointer-events-none bg-[radial-gradient(#2563eb_1px,transparent_1px)] bg-size-[16px_16px]" />
+                <div className="absolute right-0 top-0 w-full h-full opacity-20 pointer-events-none bg-[radial-gradient(#2563eb_1px,transparent_1px)] bg-size-[16px_16px]" />
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 items-center">
                     <div className="lg:col-span-4 relative flex justify-center lg:justify-start">

@@ -93,8 +93,10 @@ const Services = () => {
     const currentGroup = services.slice(currentIndex, currentIndex + itemsToShow);
 
     return (
-        <section id="services" className="bg-gray-50 w-full overflow-hidden py-24 px-6 md:px-12">
+        <section id="services" className="bg-gray-50 w-full overflow-hidden relative py-24 px-6 md:px-12">
+            <div className="absolute right-0 top-0 w-full h-full opacity-20 pointer-events-none bg-[radial-gradient(#2563eb_1px,transparent_1px)] bg-size-[16px_16px]" />
             <div className="max-w-7xl mx-auto relative">
+                
                 {/* Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}

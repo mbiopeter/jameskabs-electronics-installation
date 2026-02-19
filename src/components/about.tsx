@@ -161,7 +161,7 @@ const About = () => {
                             </a>
                             <div className="flex items-center gap-3">
                                 <div className="w-12 h-12 bg-gray-200 rounded-full border-2 border-blue-600 overflow-hidden">
-                                    <Image src="/profile.jpg" alt="Founder" width={48} height={48} />
+                                    <Image src="/profile.jpeg" alt="Founder" width={48} height={48} />
                                 </div>
                                 <div>
                                     <h5 className="font-bold text-2xl text-gray-900">James Maina</h5>

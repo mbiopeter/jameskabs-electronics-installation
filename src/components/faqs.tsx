@@ -80,7 +80,7 @@ const Faqs = () => {
                         viewport={{ once: true }}
                         className="lg:col-span-7 z-2">
                         <div className="mx-auto lg:mx-0">
-                            <h5 className="text-blue-600 font-semibold uppercase tracking-widest text-sm mb-4">
+                            <h5 className="text-white md:text-blue-600 font-semibold uppercase tracking-widest text-sm mb-4">
                                 See Our FAQs
                             </h5>
                             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-10 leading-tight">

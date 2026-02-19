@@ -19,7 +19,7 @@ import {
 const socialLinks = [
     {
         icon: Facebook,
-        href: "https://facebook.com/yourusername",
+        href: "https://www.facebook.com/profile.php?id=100084265473178&mibextid=rS40aB7S9Ucbxw6v",
         label: "Facebook",
     },
     {
@@ -34,7 +34,7 @@ const socialLinks = [
     },
     {
         icon: Instagram,
-        href: "https://instagram.com/yourusername",
+        href: "https://www.instagram.com/jameskabs42?utm_source=qr&igsh=empvZzhtZ2d6aW11",
         label: "Instagram",
     },
 ];
@@ -74,9 +74,9 @@ const Header = () => {
             <div className={`w-full bg-[#1a1d2b] text-white text-xs md:text-sm transition-transform duration-300 ${showContact ? 'translate-y-0' : '-translate-y-full'}`}>
                 <div className="mx-auto flex flex-col md:flex-row justify-between items-stretch">
                     <div className="flex items-center space-x-4 md:space-x-8 py-3 px-4 md:px-10">
-                        <a href="mailto:info@example.com" className="flex items-center hover:text-[#ad1559] transition-colors group">
+                        <a href="mailto:mainajamed682@gmail.com" className="flex items-center hover:text-[#ad1559] transition-colors group">
                             <Mail className="w-4 h-4 mr-2 text-[#ad1559] group-hover:text-white transition-colors" />
-                            mainajames@gmail.com
+                            mainajamed682@gmail.com
                         </a>
                         <a href={`tel:+${phoneNumber}`} className="flex items-center hover:text-[#ad1559] transition-colors group">
                             <Phone className="w-4 h-4 mr-2 text-[#ad1559] group-hover:text-white transition-colors" />
@@ -148,7 +148,7 @@ const Header = () => {
                 {/* Mobile Dropdown */}
                 <div className={`xl:hidden overflow-hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-screen border-t' : 'max-h-0'}`}>
                     <div className="bg-white px-6 py-6 space-y-4 shadow-inner">
-                        {['Home', 'About', 'Services', 'Pages', 'Blog', 'Contact'].map((item) => (
+                        {['Home', 'About', 'Services', 'Gallery', 'Faqs', 'Testimonials'].map((item) => (
                             <Link 
                                 key={item} 
                                 href={item.toLowerCase() === 'home' ? '#' : `/#${item.toLowerCase()}`}

@@ -24,7 +24,7 @@ const Footer = () => {
                     <div>
                         <div className="mb-6">
                             <Image
-                                src="/logo.png" // replace if needed
+                                src="/logo.png"
                                 alt="Company Logo"
                                 width={150}
                                 height={40}
@@ -69,7 +69,7 @@ const Footer = () => {
                             ].map((item, index) => (
                                 <li key={index}>
                                     <a
-                                        href="#"
+                                        href="#services"
                                         className="hover:text-blue-500 transition"
                                     >
                                         {item}
@@ -93,12 +93,9 @@ const Footer = () => {
                                 "Contact"
                             ].map((item, index) => (
                                 <li key={index}>
-                                    <a
-                                        href="#"
-                                        className="hover:text-blue-500 transition"
-                                    >
+                                    <p className="hover:text-blue-500 transition">
                                         {item}
-                                    </a>
+                                    </p>
                                 </li>
                             ))}
                         </ul>
@@ -125,7 +122,7 @@ const Footer = () => {
                             </li>
                             <li className="flex items-center gap-3">
                                 <Mail size={18} className="text-blue-500" />
-                                <span>mainajames@gmail.com</span>
+                                <span>mainajamed682@gmail.com</span>
                             </li>
                         </ul>
                     </div>
@@ -136,14 +133,11 @@ const Footer = () => {
             <div className="border-t border-slate-800">
                 <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-400">
                     <p>
-                        © {new Date().getFullYear()} Your Company. All rights
+                        JamesKabs©{new Date().getFullYear()}. All rights
                         reserved.
                     </p>
                     <div className="flex items-center gap-6">
-                        <a href="#" className="hover:text-blue-500 transition">
-                            Privacy Policy
-                        </a>
-                        <a href="#" className="hover:text-blue-500 transition">
+                        <a href="/terms" className="hover:text-blue-500 transition">
                             Terms of Service
                         </a>
                     </div>

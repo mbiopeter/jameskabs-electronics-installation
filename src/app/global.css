@@ -17,9 +17,7 @@
 html {
     scroll-behavior: smooth;
 }
-[id] {
-    scroll-margin-top: 95px;
-}
+
 .scrollbar-hide::-webkit-scrollbar {
     display: none;
 }
@@ -66,5 +64,11 @@ body {
 @media (max-width: 768px) {
     .animate-marquee {
         animation-duration: 45s;
+    }
+}
+
+@media (min-width: 640px) {
+    [id] {
+        scroll-margin-top: 95px;
     }
 }
