@@ -65,10 +65,10 @@ const Services = () => {
     const scroll = (direction = "right") => {
         if (!scrollRef.current) return;
 
-        const scrollAmount = 335;
+        const containerWidth = scrollRef.current.clientWidth;
 
         scrollRef.current.scrollBy({
-            left: direction === "left" ? -scrollAmount : scrollAmount,
+            left: direction === "left" ? -containerWidth : containerWidth,
             behavior: "smooth"
         });
     };
@@ -124,7 +124,7 @@ const Services = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="group min-w-74 z-2 max-w-74 bg-white border border-gray-200 p-8 rounded-xl shadow-sm hover:shadow-xl transition">
+                                className="group min-w-full sm:min-w-[320px] md:min-w-85 lg:min-w-74 bg-white border border-gray-200 p-8 rounded-xl shadow-sm hover:shadow-xl transition">
                                 <div className="w-16 h-16 mb-6 rounded-xl flex items-center justify-center bg-blue-100 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition duration-300">
                                     {service.icon}
                                 </div>
