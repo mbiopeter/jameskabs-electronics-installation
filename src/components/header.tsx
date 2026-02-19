@@ -84,7 +84,7 @@ const Header = () => {
                         </a>
                     </div>
 
-                    <div className="bg-blue-600 flex items-center px-6 md:px-10 py-2 md:py-0 md:rounded-b-lg">
+                    <div className="bg-blue-600 hidden md:flex items-center px-6 md:px-10 py-2 md:py-0 md:rounded-b-lg">
                         <span className="font-bold mr-4 hidden sm:inline">Follow Me:</span>
                         <div className="flex space-x-3">
                             {socialLinks.map(({ icon: Icon, href, label }) => (
@@ -105,8 +105,8 @@ const Header = () => {
 
             {/* Main Navigation */}
             <div className="bg-white sticky top-0 z-50 shadow">
-                <div className="max-w-360 mx-auto flex justify-between items-center h-20 md:h-24 px-0 md:px-10">
-                    <Link href="/" className="flex items-center group">
+                <div className="w-full flex justify-between items-center h-20 md:h-24 px-0">
+                    <Link href="/" className="flex group -ml-12 md:ml-20">
                         <Image 
                             src="/logo.png"  
                             alt="JamesKabs"
@@ -126,7 +126,7 @@ const Header = () => {
                         ))}
                     </nav>
 
-                    <div className="flex items-center h-full">
+                    <div className="flex items-center md:mr-80 h-full">
                         <a
                             href={whatsappQuoteLink}
                             target="_blank"
