@@ -74,7 +74,7 @@ const Header = () => {
             <div className={`w-full bg-[#1a1d2b] text-white text-xs md:text-sm transition-transform duration-300 ${showContact ? 'translate-y-0' : '-translate-y-full'}`}>
                 <div className="mx-auto flex flex-col md:flex-row justify-between items-stretch">
                     <div className="flex items-center space-x-4 md:space-x-8 py-3 px-4 md:px-10">
-                        <a href="mailto:mainajamed682@gmail.com" className="flex items-center hover:text-[#ad1559] transition-colors group">
+                        <a href="mailto:mainajamed682@gmail.com?subject=Jameskabs%20electrical%20Installation%20Enquirement" className="flex items-center hover:text-[#ad1559] transition-colors group">
                             <Mail className="w-4 h-4 mr-2 text-[#ad1559] group-hover:text-white transition-colors" />
                             mainajamed682@gmail.com
                         </a>

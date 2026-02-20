@@ -30,7 +30,7 @@ const FloatingContact = () => {
             icon: <Mail size={20} />,
             bg: "bg-red-500",
             label: "Email",
-            link: "mailto:mainajamed682@gmail.com"
+            link: "mailto:mainajamed682@gmail.com?subject=Jameskabs%20electrical%20Installation%20Enquirement"
         },
         {
             icon: <Send size={20} />,
