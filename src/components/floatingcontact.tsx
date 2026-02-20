@@ -30,13 +30,13 @@ const FloatingContact = () => {
             icon: <Mail size={20} />,
             bg: "bg-red-500",
             label: "Email",
-            link: "mailto:mainajames@gmail.com"
+            link: "mailto:mainajamed682@gmail.com"
         },
         {
             icon: <Send size={20} />,
             bg: "bg-sky-500",
             label: "Telegram",
-            link: "https://t.me/mainajames"
+            link: "https://t.me/Jameskabs254"
         }
     ];
 
